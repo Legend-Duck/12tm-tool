@@ -2,6 +2,7 @@ import tkinter as tk
 import random as rn
 
 class Main(tk.Frame):
+
     def __init__(self, root=None):
         super().__init__(root)
         root.title('12-tone Matrix')
@@ -15,6 +16,7 @@ class Main(tk.Frame):
         self.button_frame = Button(self, self.command)
 
 class Button(tk.Frame):
+
     def __init__(self, main, command):
         super().__init__(main)
         self.grid(row=0, column=1, sticky=tk.NW)
@@ -25,6 +27,7 @@ class Button(tk.Frame):
             tk.Button(self, text=key, command=getattr(command, self.type[key])).grid(row=self.key.index(key), column=0, sticky=tk.EW)
 
 class Grid(tk.Frame):
+
     def __init__(self, main):
         super().__init__(main)
         self.rowconfigure(index=list(range(12)), weight=1)
@@ -40,6 +43,7 @@ class Grid(tk.Frame):
                 tmp[column].grid(row=row, column=column, sticky=tk.NSEW)
 
 class Command:
+
     def __init__(self, grid_frame):
         self.grid_frame = grid_frame
         self.num = list(range(12))
