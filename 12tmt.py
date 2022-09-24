@@ -5,7 +5,7 @@ class Main(tk.Frame):
 
     def __init__(self, root=None):
         super().__init__(root)
-        root.title('12-tone Matrix')
+        root.title('12-Tone Matrix Tool')
         root.rowconfigure(index=0, weight=1)
         root.columnconfigure(index=0, weight=1)
         self.rowconfigure(index=0, weight=1)
