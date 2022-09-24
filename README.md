@@ -1,4 +1,4 @@
-# 12-Tone Matrix
+# 12-Tone Matrix Tool
 
-Calculate, autofill for 12-tone matrix
+autofill, random generate tool for 12-Tone Matrix
 
