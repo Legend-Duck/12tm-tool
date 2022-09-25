@@ -4,16 +4,19 @@ import random as rn
 class Main(tk.Frame):
 
     def __init__(self, root=None):
-        super().__init__(root)
-        root.title('12-Tone Matrix Tool')
-        root.rowconfigure(index=0, weight=1)
-        root.columnconfigure(index=0, weight=1)
-        self.rowconfigure(index=0, weight=1)
-        self.columnconfigure(index=[0, 1], weight=1)
-        self.grid(row=0, column=0, sticky=tk.NSEW)
-        self.grid_frame = Grid(self)
-        self.command = Command(self.grid_frame)
-        self.button_frame = Button(self, self.command)
+        if root != None:
+            super().__init__(root)
+            root.title('12-Tone Matrix Tool')
+            root.rowconfigure(index=0, weight=1)
+            root.columnconfigure(index=0, weight=1)
+            self.rowconfigure(index=0, weight=1)
+            self.columnconfigure(index=[0, 1], weight=1)
+            self.grid(row=0, column=0, sticky=tk.NSEW)
+            self.grid_frame = Grid(self)
+            self.command = Command(self.grid_frame)
+            self.button_frame = Button(self, self.command)
+        else:
+            print('[ERROR] root is missing')
 
 class Button(tk.Frame):
 
