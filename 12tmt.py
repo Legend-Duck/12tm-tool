@@ -73,10 +73,10 @@ class Command:
         for i in range(12):
             self.grid_frame.entry[0][i].delete('0', 'end')
             self.grid_frame.entry[0][i].insert('0', self.num[i])
+
         self.auto_fill()
 
     def clear(self):
-
         for row in range(12):
             for column in range(12):
                 self.grid_frame.entry[row][column].delete('0', 'end')
